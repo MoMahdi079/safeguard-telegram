@@ -287,7 +287,7 @@ const handleNewChatMember = async (bot, type) => {
 };
 
 function handleStart(bot) {
-  bot.onText(/\/start (.*)$/, (msg, match) => {
+  bot.onText(/\/start($| .*)/, (msg, match) => {
     let botInfo;
     bot.getMe().then((botInformation) => {
       botInfo = botInformation;
